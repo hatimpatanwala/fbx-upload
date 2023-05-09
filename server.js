@@ -14,8 +14,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Routes
 const uploadRoutes = require('./app/routes/upload.route');
 const downloadRoutes = require('./app/routes/download.route');
+const listRoutes = require('./app/routes/listRoute');
 app.use(uploadRoutes);
 app.use(downloadRoutes);
+app.use(listRoutes);
 
 // Start server
 const port = process.env.PORT || 3000;
